@@ -1,0 +1,227 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #181a1b;
+    color: #eaeaea;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .container {
+    background: #2c2f32;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Style */
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+body.dark-mode h1 {
+    color: #00aaff;
+}
+
+/* Form Style */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Form Field Style */
+div > label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode div > label {
+    color: #eaeaea;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+body.dark-mode input[type="number"] {
+    border: 1px solid #444;
+    background: #333;
+    color: #eaeaea;
+}
+
+/* Button Style */
+button[type="submit"], #export-pdf {
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[type="submit"]:hover, #export-pdf:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"]:active, #export-pdf:active {
+    transform: scale(0.98);
+}
+
+body.dark-mode button[type="submit"], body.dark-mode #export-pdf {
+    background-color: #00aaff;
+}
+
+body.dark-mode button[type="submit"]:hover, body.dark-mode #export-pdf:hover {
+    background-color: #007bff;
+}
+
+/* Radio Button Style */
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* Input Section Style */
+#percentage-div, #custom-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Results Section Style */
+#results {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #results {
+    background: #333;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+#results > div {
+    margin-bottom: 1rem;
+}
+
+#results > div > label {
+    font-weight: 600;
+    color: #333;
+}
+
+body.dark-mode #results > div > label {
+    color: #eaeaea;
+}
+
+#results > div > span {
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+body.dark-mode #results > div > span {
+    color: #00aaff;
+}
+
+/* Theme Toggle Switch */
+.theme-switch {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: auto;
+    height: auto;
+}
+
+.slider {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 24px;
+    transition: background-color 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Export Button Style */
+#export-pdf {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    background-color: #28a745;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#export-pdf:hover {
+    background-color: #218838;
+}
+
+body.dark-mode #export-pdf {
+    background-color: #2ecc71;
+}
+
+body.dark-mode #export-pdf:hover {
+    background-color: #27ae60;
+}
