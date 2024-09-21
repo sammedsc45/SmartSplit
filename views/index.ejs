@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>SmartSplit</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -40,6 +41,29 @@
                 <label for="num-of-people">Number of People</label>
                 <input type="number" id="num-of-people" name="num-of-people" required>
             </div>
+
+            <!-- Currency Selection -->
+             <div id="currency_roller">
+                <div id="base_currency_roller">
+                    <label for="base-currency-selector">Base Currency:</label>
+                    <select id="base-currency-selector">
+                        <option value="INR">Indian Rupee (INR)</option>
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <!-- Add more currencies as needed -->
+                    </select>
+                </div>
+                <div id="base_currency_roller">
+                    <label for="target-currency-selector">Target Currency:</label>
+                    <select id="target-currency-selector">
+                        <option value="INR">Indian Rupee (INR)</option>
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <!-- Add more currencies as needed -->
+                    </select>
+                </div>
+            </div>
+
             <button type="submit">Calculate</button>
         </form>
 
@@ -57,17 +81,19 @@
                 <label>Amount Per Person:</label>
                 <span id="amount-per-person"></span>
             </div>
+            <p id="para">...Don't forget to clear the bills...</p>
         </div>
 
         <!-- Export Buttons -->
         <div>
             <button id="export-pdf">Export as PDF</button>
-        </div>
+            <button type="button" id="reset-btn">Reset</button>
+        </div>     
     </div>
 
     <!-- JavaScript files -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/theme.js"></script>
 </body>
